@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,200;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: black;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: black;
+}
+
+h4{
+    font-size: 20px;
+    color: black;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+    color: #000000;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 40px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+/* Recipe Gallery */
+
+#product{
+    text-align: center;
+}
+
+#product .container{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+
+#product .items{
+
+    width: 20%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #465b52;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 15px;
+    transition: 0.3s;
+}
+
+#product .items:hover{
+    border-width: 10px;
+}
+
+#product .items img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+#product .items .name{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product .items .name span{
+    color: rgb(108, 102, 114);
+    font-size: 13px;
+}
+
+#product .items .name h5{
+    padding-top: 3px;
+    color: black;
+    font-size: 15px;
+}
+
+#product .items .name i{
+    font-size: 15px;
+    color: #ffc800;
+}
+
+/* pagination to Next Page */
+
+#pagination{
+    text-align: center;
+}
+
+#pagination a{
+    text-decoration: none;
+    background-color: #465b52;
+    padding: 15px 20px;
+    border-radius: 20px;
+    color: azure;
+    font-size: 16px;
+}
+
+#pagination a i{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Single Recipe Page*/
+
+#recipeDetails{
+    display: flex;
+    margin-top: 20px;
+}
+
+#recipeDetails .SingleRecipeImage{
+    width: 30%;
+    margin-right: 50px;
+}
+
+#recipeDetails .SingleRecipeDetails{
+    width: 70%;
+
+}
+
+#recipeDetails .SingleRecipeDetails .btn-cal{
+    background-color: #0d641d;
+    border-radius: 3px;
+    padding: 5px;
+    display: block;
+    color: #fff;
+    cursor: pointer;
+}
+
+.smallImageSet{
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-column{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+
+
+
+/* Step Form */
+
+:root {
+    --primary-color: rgb(54, 153, 4);
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  .width-50 {
+    width: 50%;
+  }
+  
+  .ml-auto {
+    margin-left: auto;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Progressbar */
+  .progressbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    counter-reset: step;
+    margin: 0 0 4rem;
+  }
+  
+  .progressbar::before,
+  .progress {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #dcdcdc;
+    z-index: -1;
+  }
+  
+  .progress {
+    background-color: var(--primary-color);
+    width: 0%;
+    transition: 0.3s;
+  }
+  
+  .progress-step {
+    width: 40px;
+    height: 40px;
+    background-color: #dcdcdc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step::before {
+    counter-increment: step;
+    content: counter(step);
+  }
+  
+  .progress-step::after {
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: 12px;
+    color: #666;
+  }
+  
+  .progress-step-active {
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+  }
+  
+  /* Form */
+  .form {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0 0 0;
+    border: 3px solid #ccc;
+    border-radius: 0.35rem;
+    padding: 10px;
+  }
+  
+  .form-step {
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+  
+  .form-step-active {
+    display: block;
+  }
+  
+  .input-group {
+    margin: 2rem 0;
+  }
+  
+  @keyframes animate {
+    from {
+      transform: scale(1, 0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1, 1);
+      opacity: 1;
+    }
+  }
+  
+  /* Button */
+  .btns-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.75rem;
+    display: block;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: 0.5s;
+  }
+  .btn:hover {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+  }
